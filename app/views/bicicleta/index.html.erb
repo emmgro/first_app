@@ -1,0 +1,31 @@
+<h1>Listing bicicleta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Marca</th>
+      <th>Precio</th>
+      <th>Descripcion</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bicicleta.each do |bicicletum| %>
+      <tr>
+        <td><%= bicicletum.marca %></td>
+        <td><%= bicicletum.precio %></td>
+        <td><%= bicicletum.descripcion %></td>
+        <td><%= link_to 'Show', bicicletum %></td>
+        <td><%= link_to 'Edit', edit_bicicletum_path(bicicletum) %></td>
+        <td><%= link_to 'Destroy', bicicletum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bicicletum', new_bicicletum_path %>

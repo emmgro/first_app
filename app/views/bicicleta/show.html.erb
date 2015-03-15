@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @bicicletum.marca %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @bicicletum.precio %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @bicicletum.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_bicicletum_path(@bicicletum) %> |
+<%= link_to 'Back', bicicleta_path %>
